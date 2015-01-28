@@ -23,7 +23,7 @@ app.get('/stream', function (req, res) {
     console.log('Client connected, ip:', clientIP);
 
     setInterval(function () {
-        console.log('Sent ', clientSent, 'bytes to', clientIP || clientHost);
+        console.log('Sent ', clientSent, 'bytes to', clientHost || clientIP);
     }, 5000)
 
     dns.reverse(clientIP, function (err, domains) {
